@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_index">
+
+    <fragment
+        android:id="@+id/navigation_index"
+        android:name="cn.xq.festec.banxiaappuser20.ui.index.IndexFragment"
+        android:label="@string/title_index"
+        tools:layout="@layout/fragment_index" >
+        <action
+            android:id="@+id/action_navigation_index_to_departFragment"
+            app:destination="@id/departFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_view"
+        android:name="cn.xq.festec.banxiaappuser20.ui.view.ViewFragment"
+        android:label="@string/title_view"
+        tools:layout="@layout/fragment_view" />
+
+    <fragment
+        android:id="@+id/navigation_mine"
+        android:name="cn.xq.festec.banxiaappuser20.ui.mine.MineFragment"
+        android:label="@string/title_mine"
+        tools:layout="@layout/fragment_mine" />
+    <fragment
+        android:id="@+id/departFragment"
+        android:name="cn.xq.festec.banxiaappuser20.ui.index.department.DepartFragment"
+        android:label="科室选择"
+        tools:layout="@layout/depart_fragment" />
+</navigation>
